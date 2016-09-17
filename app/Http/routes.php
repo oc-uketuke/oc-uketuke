@@ -18,7 +18,7 @@ Route::get('/', function () {
     return view('landing',$data);
 });
 
-Route::get('/opencampass/{{code}}', function () {
+Route::get('/opencanpass/{{code}}', function () {
     return view('people-list');
 });
 
@@ -41,8 +41,16 @@ Route::put('/api/people/taiken',function(Request $request){
 	return App\people::find($data['id'])->updateTaiken($data['taiken_num'],$data['taiken_id']);
 });
 
-Route::get('/opencampass/{id}', [ 'as' => 'opencampass', function ($id) {
+Route::get('/opencanpass/{id}', [ 'as' => 'opencanpass', function ($id) {
     $data['oc_id'] = $id;
     return view('people-list',$data);
 }]);
 
+Route::get('/api/opencanpass/{id}/taiken',function($id){
+
+	$data['taiken1'] = App\opencanpass::find($id)->taiken1;
+	$data['taiken2'] = App\opencanpass::find($id)->taiken2;
+	$data['taiken3'] = App\opencanpass::find($id)->taiken3;
+	
+	return $data;
+});
