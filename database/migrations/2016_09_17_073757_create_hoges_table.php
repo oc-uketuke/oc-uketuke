@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOpencanpassTable extends Migration
+class CreateHogesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -12,11 +12,9 @@ class CreateOpencanpassTable extends Migration
      */
     public function up()
     {
-        Schema::create('Opencanpass',function(Blueprint $table){
+        Schema::create('hoges', function (Blueprint $table) {
             $table->increments('id');
-            $table->date('date');
-            $table->string('title');
-            $table->string('code',7);
+            $table->timestamps();
         });
     }
 
@@ -27,6 +25,6 @@ class CreateOpencanpassTable extends Migration
      */
     public function down()
     {
-        Schema::drop('Opencanpass');
+        Schema::drop('hoges');
     }
 }

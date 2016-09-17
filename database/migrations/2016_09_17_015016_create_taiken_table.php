@@ -16,6 +16,7 @@ class CreateTaikenTable extends Migration
             $table->increments('id');
             $table->string('field');
             $table->string('name');
+            $table->timestamps('');
         });
     }
 

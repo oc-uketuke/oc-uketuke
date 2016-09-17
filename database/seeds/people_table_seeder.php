@@ -12,7 +12,7 @@ class people_table_seeder extends Seeder
     public function run()
     {
       $faker=Faker\Factory::create('ja_JP');
-      for($i=0;$i<5;$i++){
+      for($i=0;$i<200;$i++){
         DB::table('People')->insert([
           'name' => $faker->name(),
           'code' => str_random(7),
