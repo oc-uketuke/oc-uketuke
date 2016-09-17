@@ -13,14 +13,14 @@ class CreatePepoleTable extends Migration
     public function up()
     {
         Schema::create('People',function(Blueprint $table){
-            $table->inclements('id');
+            $table->increments('id');
             $table->integer('oc_id');
             $table->string('name');
             $table->string('furigana');
             $table->string('school_name')->nullable();
-            $table->integer('taiken1');
-            $table->integer('taiken2');
-            $table->integer('taiken3');
+            $table->integer('taiken1')->nullable();
+            $table->integer('taiken2')->nullable();
+            $table->integer('taiken3')->nullable();
             $table->boolean('entry');
         });
     }
