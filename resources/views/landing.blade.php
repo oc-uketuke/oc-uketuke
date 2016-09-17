@@ -4,8 +4,18 @@
 @section('content')
 	<h1>オープンキャンパス</h1>
 	<hr>
+	<div class="row">
 	@foreach($ocs as $oc)
-		オープンキャンパス
-		{{ $landing->getDate($oc->date) }}({{ $landing->getWeek($oc->date) }})
+		<div class="col s4 m4">
+			<div class="card">
+			 	<a>
+					<div class="card-content">
+						<span class="card-title">オープンキャンパス</span>
+						<span>{{ $landing->getDate($oc->date) }}({{ $landing->getWeek($oc->date) }})</span>
+					</div>
+				</a>
+			</div>
+		</div>
 	@endforeach
+	</div>
 @endsection
