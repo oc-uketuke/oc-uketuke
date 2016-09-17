@@ -18,8 +18,14 @@ Route::get('/', function () {
     return view('landing',$data);
 });
 
-Route::get('/opencanpass/{{code}}', function () {
-    return view('people-list');
+Route::get('/opencampass/{id}', function ($id) {
+    $data['oc_id'] = $id;
+    return view('people-list',$data);
+});
+
+Route::get('/person/{id}',function($id){
+    $data['person'] = App\people::find($id);
+    return view('person',$data);
 });
 
 Route::get('/api/people',function(){
