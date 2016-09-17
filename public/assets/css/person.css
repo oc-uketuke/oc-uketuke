@@ -1,0 +1,20 @@
+#person-info-top {
+	margin-bottom: 10px;
+}
+
+#person-info-top > div {
+	display: inline-block;
+}
+
+#school-year {
+	margin-left: 3em;
+}
+
+#name > div {
+	display: inline-block;
+	text-align: center;
+}
+
+#name .name-top {
+	font-size: 0.5em;
+}
