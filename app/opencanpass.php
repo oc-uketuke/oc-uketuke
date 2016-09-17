@@ -14,7 +14,7 @@ class opencanpass extends Model
 
     public function people()
     {
-    	return $this->hasMany('App\people'); 
+    	return $this->hasMany('App\people', 'oc_id', 'id'); 
     }
 
     public function taiken1()

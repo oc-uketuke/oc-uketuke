@@ -41,4 +41,8 @@ Route::put('/api/people/taiken',function(Request $request){
 	return App\people::find($data['id'])->updateTaiken($data['taiken_num'],$data['taiken_id']);
 });
 
+Route::get('/opencampass/{id}', [ 'as' => 'opencampass', function ($id) {
+    $data['oc_id'] = $id;
+    return view('people-list',$data);
+}]);
 
