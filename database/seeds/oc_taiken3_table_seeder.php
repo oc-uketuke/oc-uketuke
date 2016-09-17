@@ -29,7 +29,7 @@ class oc_taiken3_table_seeder extends Seeder
           }
         }
         if($j>=count($hoge[$id_rand])){
-          DB::table('Oc_Taiken2')->insert([
+          DB::table('Oc_Taiken3')->insert([
             'oc_id'=>$id_rand,
             'taiken_id'=>$taiken_rand
           ]);
