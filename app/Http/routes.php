@@ -42,7 +42,7 @@ Route::put('/api/people/entry',function(Request $request){
 	return;
 });
 
-Route::put('/api/people/taiken',function(Request $request){
+Route::post('/api/people/taiken',function(Request $request){
 	$data = $request->all();
 	return App\people::find($data['id'])->updateTaiken($data['taiken_num'],$data['taiken_id']);
 });
