@@ -35,4 +35,5 @@
 		<taiken :oc-id="{{ $person->oc_id }}" :taiken-num="2" :now-taiken="{{ $person->taiken2 }}" :person-num="{{ $person->id }}"></taiken>
 		<taiken :oc-id="{{ $person->oc_id }}" :taiken-num="3" :now-taiken="{{ $person->taiken3 }}" :person-num="{{ $person->id }}"></taiken>
 	</div>
+	<attend-btn :person-num="{{ $person->id }}" :now-state="{{ $person->entry }}"></attend-btn>
 @endsection
