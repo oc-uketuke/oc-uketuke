@@ -18,6 +18,10 @@ Route::get('/', function () {
     return view('landing',$data);
 });
 
+Route::get('/opencampass/{{code}}', function () {
+    return view('people-list');
+});
+
 Route::get('/api/people',function(){
 	$result['people'] = App\people::all();
 	return $result;
@@ -36,4 +40,5 @@ Route::put('/api/people/taiken',function(Request $request){
 	$data = $request->all();
 	return App\people::find($data['id'])->updateTaiken($data['taiken_num'],$data['taiken_id']);
 });
+
 

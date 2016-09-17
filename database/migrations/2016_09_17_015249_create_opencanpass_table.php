@@ -15,6 +15,8 @@ class CreateOpencanpassTable extends Migration
         Schema::create('Opencanpass',function(Blueprint $table){
             $table->increments('id');
             $table->date('date');
+            $table->string('title');
+            $table->string('code',7);
         });
     }
 
