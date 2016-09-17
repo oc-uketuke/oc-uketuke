@@ -6,12 +6,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
       	<!--Import materialize.css-->
-      	<link type="text/css" rel="stylesheet" href="{{ asset('assets/lib/materialize/css/materialize.min.css') }}"  media="screen,projection"/>
+      	<link type="text/css" rel="stylesheet" href="{{ asset('assets/lib/materialize/css/materialize.min.css') }}"  />
+		<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/common.css') }}" />
 		@yield('css')
 	</head>
-	<body>
+	<body class="grey lighten-4">
 		@include('components/header')
-		<main class="container">
+		<main class="container  ">
 			@yield('content')
 		</main>
 		@include('components/footer')
