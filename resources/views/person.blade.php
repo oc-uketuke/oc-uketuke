@@ -28,6 +28,12 @@
 	</div>
 	<hr>
 	<div id="taiken-list">
-		<taiken></taiken>
+		<h4>午前</h4>
+		<taiken :oc-id="{{ $person->oc_id }}" :taiken-num="1" :now-taiken="{{ $person->taiken1 }}" :person-num="{{ $person->id }}"></taiken>
+		<hr>
+		<h4>午後</h4>
+		<taiken :oc-id="{{ $person->oc_id }}" :taiken-num="2" :now-taiken="{{ $person->taiken2 }}" :person-num="{{ $person->id }}"></taiken>
+		<taiken :oc-id="{{ $person->oc_id }}" :taiken-num="3" :now-taiken="{{ $person->taiken3 }}" :person-num="{{ $person->id }}"></taiken>
 	</div>
+	<attend-btn :person-num="{{ $person->id }}" :now-state="{{ $person->entry }}"></attend-btn>
 @endsection

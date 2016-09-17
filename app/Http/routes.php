@@ -37,12 +37,12 @@ Route::get('/api/opencanpass/{id}/people',function($id){
 	return App\opencanpass::find($id)->people;
 });
 
-Route::put('/api/people/entry',function(Request $request){
+Route::post('/api/people/entry',function(Request $request){
 	App\people::find($request->get('id'))->update(['entry'=>'true']);
-	return;
+	return true;
 });
 
-Route::put('/api/people/taiken',function(Request $request){
+Route::post('/api/people/taiken',function(Request $request){
 	$data = $request->all();
 	return App\people::find($data['id'])->updateTaiken($data['taiken_num'],$data['taiken_id']);
 });
