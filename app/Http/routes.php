@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data['ocs'] = App\Opencampass::orderBy('date')->before()->get();
+    return view('landing',$data);
 });
