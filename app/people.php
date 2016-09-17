@@ -9,6 +9,8 @@ class people extends Model
 
 	protected $table = 'People';
 
+    public $timestamps = false;
+
 	protected $fillable = [
         'code', 'oc_id', 'name','furigana','schoolname','taiken1','taiken2','taiken3','entry',
     ];
@@ -33,5 +35,10 @@ class people extends Model
     	return $this->belongsTo('App\opencanpass','oc_id'); 
     }
 
-
+    public function updateTaiken($num, $taiken_id)
+    {
+        $this['taiken' . $num] = $taiken_id;
+        $this->save();
+        return $this;
+    }
 }
