@@ -19,6 +19,7 @@ class CreatePepoleTable extends Migration
             $table->string('name');
             $table->string('furigana');
             $table->string('school_name')->nullable();
+            $table->integer('gakunen')->nullable();
             $table->integer('taiken1')->nullable();
             $table->integer('taiken2')->nullable();
             $table->integer('taiken3')->nullable();

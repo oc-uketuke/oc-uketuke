@@ -19,9 +19,10 @@ class people_table_seeder extends Seeder
           'oc_id' => mt_rand()%10,
           'furigana'=>'ほげほげ',
           'school_name'=>$faker->name(),
-          'taiken1'=>mt_rand()%10,
-          'taiken2'=>mt_rand()%10,
-          'taiken3'=>mt_rand()%10,
+          'gakunen'=>rand(1,3),
+          'taiken1'=>rand(1,21),
+          'taiken2'=>rand(1,21),
+          'taiken3'=>rand(1,21),
           'entry'=>false
         ]);
       }
