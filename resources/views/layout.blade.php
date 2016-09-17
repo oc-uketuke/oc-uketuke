@@ -10,7 +10,7 @@
 		<link type="text/css" rel="stylesheet" href="{{ asset('assets/css/common.css') }}" />
 		@yield('css')
 	</head>
-	<body class="grey lighten-4">
+	<body class="grey lighten-4" id="app">
 		@include('components/header')
 		<main class="container  ">
 			@yield('content')
@@ -18,6 +18,7 @@
 		@include('components/footer')
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="{{ asset('assets/lib/materialize/js/materialize.min.js') }}"></script>
+		<script src="{{ asset('assets/js/bundle.js') }}"></script>
 		@yield('js')
 	</body>
 </html>

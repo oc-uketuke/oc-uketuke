@@ -28,6 +28,6 @@
 	</div>
 	<hr>
 	<div id="taiken-list">
-
+		<taiken></taiken>
 	</div>
 @endsection
