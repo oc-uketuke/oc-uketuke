@@ -3,7 +3,7 @@
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateOcTaikenTable extends Migration
+class CreateOcTaiken3Table extends Migration
 {
     /**
      * Run the migrations.
@@ -12,7 +12,7 @@ class CreateOcTaikenTable extends Migration
      */
     public function up()
     {
-        Schema::create('Oc_Taiken',function(Blueprint $table)
+        Schema::create('Oc_Taiken3',function(Blueprint $table)
         {
             $table->integer('oc_id')->unsigned()->index();
             $table->foreign('oc_id')->references('id')->on('Opencanpass')->onDelete('cascade');
@@ -29,6 +29,6 @@ class CreateOcTaikenTable extends Migration
      */
     public function down()
     {
-        //
+        Schema::drop('Oc_Taiken3');
     }
 }
