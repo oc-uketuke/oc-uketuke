@@ -16,6 +16,7 @@ Route::get('/', function () {
     return view('landing',$data);
 });
 
-Route::get('/opencampass/{{code}}', function () {
-    return view('people-list');
-});
+Route::get('/opencampass/{id}', [ 'as' => 'opencampass', function ($id) {
+    $data['oc_id'] = $id;
+    return view('people-list',$data);
+}]);
