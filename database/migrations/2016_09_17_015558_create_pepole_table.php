@@ -14,6 +14,7 @@ class CreatePepoleTable extends Migration
     {
         Schema::create('People',function(Blueprint $table){
             $table->increments('id');
+            $table->string('code',7);
             $table->integer('oc_id');
             $table->string('name');
             $table->string('furigana');
