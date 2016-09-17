@@ -12,15 +12,13 @@ class oc_taiken3_table_seeder extends Seeder
     public function run()
     {
       $faker=Faker\Factory::create('ja_JP');
-      $taiken123=array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
-      $taiken4=array(1,3,4,7,12,13,16,18);
-      $taiken5=array(1,2,4,5,6,10,11,14,15,17,19,20,21);
-      $taiken6=array(1,2,3,6,7,10,13,16,18,20,21);
-      $taiken7=array(1,3,4,7,12,13,16,18,21);
-      for($i=1;$i<50;$i++){
-        $id_rand=rand(1,7);
-        $taiken_rand=rand(1,21);
-        $hoge=array(1=>$taiken123,2=>$taiken123,3=>$taiken123,4=>$taiken4,5=>$taiken5,6=>$taiken6,7=>$taiken7);
+      $taiken1=array(1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20);
+      $taiken2=array(1,3,4,7,12,13,16,18);
+      $taiken3=array(1,2,4,5,6,10,11,14,15,17,19,20,21);
+      for($i=1;$i<20;$i++){
+        $id_rand=rand(1,3);
+        $taiken_rand=rand(1,20);
+        $hoge=array(1=>$taiken1,2=>$taiken2,3=>$taiken3);
         for($j=1;$j<=count($hoge[$id_rand]);$j++){
           if(in_array($taiken_rand,$hoge[$id_rand])){
             break;
