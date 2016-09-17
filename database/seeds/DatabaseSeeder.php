@@ -11,6 +11,12 @@ class DatabaseSeeder extends Seeder
      */
     public function run()
     {
-        // $this->call(UsersTableSeeder::class);
+        $this->call(people_table_seeder::class);
+        $this->call(taiken_table_seeder::class);
+        $this->call(oc_taiken1_table_seeder::class);
+        $this->call(oc_taiken2_table_seeder::class);
+        $this->call(oc_taiken3_table_seeder::class);
+        $this->call(opencanpass_table_seeder::class);
+
     }
 }
