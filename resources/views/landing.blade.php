@@ -1,17 +1,19 @@
 @extends('layout')
 
+@section('css')
+<link rel="stylesheet" href="{{ asset('assets/css/landing.css') }}">
+@endsection
+
 @inject('landing', 'App\Services\LandingService')
 @section('content')
-	<h1>オープンキャンパス</h1>
-	<hr>
 	<div class="row">
 	@foreach($ocs as $oc)
 		<div class="col s4 m4">
-			<div class="card">
+			<div class="card yellow lighten-4 ">
 			 	<a href="{{ url('opencampass', [ 'id' => $oc->id] ) }}">
 					<div class="card-content">
-						<span class="card-title">オープンキャンパス</span>
-						<span>{{ $landing->getDate($oc->date) }}({{ $landing->getWeek($oc->date) }})</span>
+						<div class="oc">オープンキャンパス</div>
+						<div>{{ $landing->getDate($oc->date) }}({{ $landing->getWeek($oc->date) }})</div>
 					</div>
 				</a>
 			</div>

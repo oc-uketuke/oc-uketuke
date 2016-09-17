@@ -1,7 +1,4 @@
-@extends('layouts.app');
+@extends('layout')
 
 @section('content')
-<p>
-  hello
-</p>
 @endsection
