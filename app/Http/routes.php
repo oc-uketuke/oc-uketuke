@@ -57,6 +57,6 @@ Route::get('/api/opencanpass/{id}/taiken',function($id){
 	$data['taiken1'] = App\opencanpass::find($id)->taiken1;
 	$data['taiken2'] = App\opencanpass::find($id)->taiken2;
 	$data['taiken3'] = App\opencanpass::find($id)->taiken3;
-	
+
 	return $data;
 });
