@@ -2,7 +2,7 @@
 	<div>
 		<h2>体験{{ taiken_num }}</h2>
 		<select>
-			
+
 		</select>
 		<button type="button">変更</button>
 	</div>
