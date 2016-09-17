@@ -15,3 +15,7 @@ Route::get('/', function () {
     $data['ocs'] = App\opencanpass::orderBy('date')->before()->get();
     return view('landing',$data);
 });
+
+Route::get('/opencampass/{{code}}', function () {
+    return view('people-list');
+});
