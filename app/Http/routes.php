@@ -12,5 +12,6 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data['ocs'] = App\opencanpass::orderBy('date')->before()->get();
+    return view('landing',$data);
 });

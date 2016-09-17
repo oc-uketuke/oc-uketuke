@@ -32,4 +32,7 @@ class opencanpass extends Model
     	return $this->belongsToMany('App\taiken','oc_taiken3','taiken_id','oc_id');
     }
 
+    public function scopeBefore($query){
+        // return $query->where('data', '<=', new \DateTime());
+    }
 }
