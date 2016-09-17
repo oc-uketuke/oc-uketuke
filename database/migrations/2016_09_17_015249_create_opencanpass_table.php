@@ -13,7 +13,7 @@ class CreateOpencanpassTable extends Migration
     public function up()
     {
         Schema::create('Opencanpass',function(Blueprint $table){
-            $table->inclements('id');
+            $table->increments('id');
             $table->date('date');
         });
     }
