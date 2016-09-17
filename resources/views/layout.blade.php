@@ -10,9 +10,11 @@
 		@yield('css')
 	</head>
 	<body>
+		@include('components/header')
 		<main class="container">
 			@yield('content')
 		</main>
+		@include('components/footer')
 		<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
 		<script src="{{ asset('assets/lib/materialize/js/materialize.min.js') }}"></script>
 		@yield('js')
