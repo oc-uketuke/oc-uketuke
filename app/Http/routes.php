@@ -15,6 +15,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/blade', function () {
+Route::get('/opencampass/{{code}}', function () {
     return view('people-list');
 });
